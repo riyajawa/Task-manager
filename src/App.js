@@ -1,7 +1,7 @@
 import React from 'react'
 import Heading from './Components/Header'
 import Tasks from './Components/Tasks'
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import AddTask from './Components/AddTask';
 
 
@@ -9,11 +9,37 @@ import AddTask from './Components/AddTask';
 function App() {
   const [showAddTask,setShowAddTask] = useState(false)
   const [tasks,setTasks] = useState([])
+
+  useEffect(() => {
+    const getTasks = async () => {
+      const tasksFromServer = await fetchTasks()
+      setTasks(tasksFromServer)
+    }
+
+    getTasks()
+  }, [])
+
+
+//fetch tasks
+const fetchTasks = async() => {
+const res = await fetch('http://localhost:5000/tasks')
+const data = await res.json()
+
+return data
+}
+
 //Delete task
 
-const deleteTask = (id) => {
+const deleteTask = async(id) => {
+  await fetch(`http://localhost:5000/tasks/${id}`,{
+    method : 'DELETE'
+  })
+
+
   setTasks(tasks.filter((task) => task.id !==id))
 }
+
+
 //toggle remainder
 const toggleReminder = (id) => {
  setTasks(
