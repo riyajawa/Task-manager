@@ -2,19 +2,19 @@
   "tasks": [
     {
       "id": 1,
-      "text": "heybaby",
-      "day": "Feb 5Th",
+      "text": "Medicine time",
+      "day": "5th feburary,2021",
       "reminder": true
     },
     {
       "id": 2,
-      "text": "hey baby",
-      "day": "Feb 6Th",
+      "text": "Time to exercise",
+      "day": "6th feburary,2021",
       "reminder": true
     },
     {
-      "text": "ihui",
-      "day": "ihugy",
+      "text": "Work from home",
+      "day": "7th Feburary,2021",
       "reminder": true,
       "id": 3
     }
