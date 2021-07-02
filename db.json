@@ -11,6 +11,12 @@
       "text": "hey baby",
       "day": "Feb 6Th",
       "reminder": true
+    },
+    {
+      "text": "ihui",
+      "day": "ihugy",
+      "reminder": true,
+      "id": 3
     }
   ]
 }
