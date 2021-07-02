@@ -3,6 +3,7 @@ import Heading from './Components/Header'
 import Tasks from './Components/Tasks'
 import { useState ,useEffect} from 'react';
 import AddTask from './Components/AddTask';
+import Footer from './Components/Footer';
 
 
 
@@ -96,6 +97,7 @@ const toggleReminder = async (id) => {
      {tasks.length>0 ? <Tasks tasks ={tasks} onDelete = {deleteTask} 
        onToggle ={toggleReminder}
      />: ('No task')}
+     <Footer/>
     </div>
   );
 }
